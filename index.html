@@ -13,25 +13,31 @@
 <body class="main-layout">
 
     <header class="main-layout main-header-box full">
-        <section class="flex space-between align-center">
-            <h1 class="main-logo full">Blogin.</h1>
 
-            <nav class="full">
-                <ul class="main-nav-list flex clean-list full">
-                    <a href="">
-                        <li class="li-container flex justify-center align-center full">Journal</li>
-                    </a>
-                    <a href="">
-                        <li class="li-container flex justify-center align-center full">About</li>
-                    </a>
-                    <a href="">
-                        <li class="li-container flex justify-center align-center full">Work</li>
-                    </a>
-                    <a href="">
-                        <li class="li-container flex justify-center align-center full">Contact</li>
-                    </a>
-                </ul>
-            </nav>
+        <section class="head-content flex space-between align-center">
+            <h1 class="main-logo full">Blogin.</h1>
+            <div>
+                <div><button class="nav-btn" onclick="toggHamNav()">DROP</button></div>
+                <nav class="ham-nav flex full">
+
+                    <ul class="main-nav-list flex clean-list full">
+                        <a href="">
+                            <li class="li-container flex justify-center align-center full">Journal</li>
+                        </a>
+                        <a href="">
+                            <li class="li-container flex justify-center align-center full">About</li>
+                        </a>
+                        <a href="">
+                            <li class="li-container flex justify-center align-center full">Work</li>
+                        </a>
+                        <a href="">
+                            <li class="li-container flex justify-center align-center full">Contact</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+
+
         </section>
 
     </header>
@@ -50,7 +56,7 @@
                         aceat eaque saceat eaque saceat eaque sit est.
                     </p>
                     <button class="card-button content-btn-container">Continue Reading</button>
-                    
+
 
                 </div>
 
@@ -119,6 +125,16 @@
 
     </footer>
 
+    <script>
+        function toggHamNav() {
+            var elNav = document.querySelector(".ham-nav")
+            if (elNav.style.display === "block") {
+                elNav.style.display = "none";
+            } else {
+                elNav.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
